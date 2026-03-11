@@ -1,6 +1,6 @@
 package com.koboolean.reactiveproject.probe;
 
-import com.koboolean.reactiveproject.testing.PublisherProbeExample;
+import com.koboolean.reactiveproject.basic.testing.PublisherProbeExample;
 import org.junit.jupiter.api.Test;
 import reactor.test.StepVerifier;
 import reactor.test.publisher.PublisherProbe;
