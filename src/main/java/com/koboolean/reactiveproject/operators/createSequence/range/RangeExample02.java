@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.range;
+package com.koboolean.reactiveproject.operators.createSequence.range;
 
 import com.koboolean.reactiveproject.operators.exam.SampleData;
 import lombok.extern.slf4j.Slf4j;

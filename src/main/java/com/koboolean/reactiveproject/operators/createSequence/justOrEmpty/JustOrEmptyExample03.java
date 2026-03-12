@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.justOrEmpty;
+package com.koboolean.reactiveproject.operators.createSequence.justOrEmpty;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;

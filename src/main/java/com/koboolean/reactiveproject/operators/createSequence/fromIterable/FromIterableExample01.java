@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.fromIterable;
+package com.koboolean.reactiveproject.operators.createSequence.fromIterable;
 
 import com.koboolean.reactiveproject.operators.exam.SampleData;
 import lombok.extern.slf4j.Slf4j;

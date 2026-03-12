@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.range;
+package com.koboolean.reactiveproject.operators.createSequence.range;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
