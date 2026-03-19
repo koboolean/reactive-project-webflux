@@ -22,7 +22,7 @@ public class CreateExample03 {
                             throw new RuntimeException(e);
                         }
                         for (int i = start; i <= end; i++) {
-                            emitter.next(i);
+                            emitter.next(Integer.valueOf(i));
                         }
                         start += 4;
                         end += 4;
