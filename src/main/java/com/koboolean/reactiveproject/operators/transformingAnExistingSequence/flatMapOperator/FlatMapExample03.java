@@ -1,0 +1,21 @@
+package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.flatMapOperator;
+
+import lombok.extern.slf4j.Slf4j;
+import reactor.core.publisher.Flux;
+import reactor.core.scheduler.Schedulers;
+
+@Slf4j
+public class FlatMapExample03 {
+    public static void main(String[] args) throws InterruptedException {
+        Flux
+                .range(2, 8)
+                .flatMap(dan -> Flux
+                        .range(1, 9)
+                        .publishOn(Schedulers.parallel())
+                        .map(n -> dan + " * " + n + " = " + dan * n))
+
+                .subscribe(log::info);
+
+        Thread.sleep(200L);
+    }
+}
