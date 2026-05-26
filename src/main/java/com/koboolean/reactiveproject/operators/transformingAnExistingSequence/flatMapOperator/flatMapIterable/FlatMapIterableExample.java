@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.flatMapIterable;
+package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.flatMapOperator.flatMapIterable;
 
 import com.koboolean.reactiveproject.operators.exam.SampleData;
 import lombok.extern.slf4j.Slf4j;

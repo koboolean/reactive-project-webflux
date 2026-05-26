@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.flatMapSequential;
+package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.flatMapOperator.flatMapSequential;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
