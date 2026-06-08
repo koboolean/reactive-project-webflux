@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.concatOperator;
+package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.concat;
 
 import com.koboolean.reactiveproject.operators.exam.SampleData;
 import lombok.extern.slf4j.Slf4j;

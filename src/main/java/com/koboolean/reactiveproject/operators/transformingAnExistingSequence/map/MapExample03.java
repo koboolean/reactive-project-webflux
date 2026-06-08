@@ -1,4 +1,4 @@
-package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.mapOperator;
+package com.koboolean.reactiveproject.operators.transformingAnExistingSequence.map;
 
 import com.koboolean.reactiveproject.operators.exam.SampleData;
 import lombok.extern.slf4j.Slf4j;
