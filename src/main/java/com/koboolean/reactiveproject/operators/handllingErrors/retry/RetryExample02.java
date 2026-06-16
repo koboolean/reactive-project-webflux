@@ -1,0 +1,45 @@
+package com.koboolean.reactiveproject.operators.handllingErrors.retry;
+
+import com.koboolean.reactiveproject.operators.exam.Book;
+import com.koboolean.reactiveproject.operators.exam.SampleData;
+import lombok.extern.slf4j.Slf4j;
+import reactor.core.publisher.Flux;
+
+import java.time.Duration;
+import java.util.stream.Collectors;
+
+@Slf4j
+public class RetryExample02 {
+    public static void main(String[] args) throws InterruptedException {
+        getAllBooksFromRemoteDB()
+                .collect(Collectors.toSet())
+                .subscribe(bookSet ->
+                        bookSet.stream()
+                                .forEach(book -> log.info("book name: {}, price: {}",
+                                        book.getBookName(), book.getPrice())));
+
+        Thread.sleep(12000);
+    }
+
+    private static Flux<Book> getAllBooksFromRemoteDB() {
+        final int[] count = {0};
+        return Flux
+                .fromIterable(SampleData.books)
+                .delayElements(Duration.ofMillis(500))
+                .map(book -> {
+                    try {
+                        count[0]++;
+                        if (count[0] == 3) {
+                            Thread.sleep(2000);
+                        }
+                    } catch (InterruptedException e) {
+
+                    }
+
+                    return book;
+                })
+                .timeout(Duration.ofSeconds(2))
+                .doOnNext(book -> log.info(book.getBookName(), book.getPrice()))
+                .retry(1);
+    }
+}
